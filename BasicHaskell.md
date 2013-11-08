@@ -18,6 +18,85 @@ main = do
   forM a putStrLn
   return ()
 ```
+The basics:
+Variable binding:
+```haskell
+let a = 10
+    b = 20
+in a + b
+```
+
+```cpp
+{ 
+int a = 10;
+int b = 20;
+a + b;
+}
+```
+
+Top level declarations:
+```haskell
+a = 1
+b = 2
+c = 3
+
+myName = "Jared Roesch"
+```
+
+any declaration can have a type signature attached:
+```haskell
+a :: Int
+a = 1
+
+b :: Double
+b = 2
+
+c :: Integer
+c = 3
+
+myName :: String
+myName = "Jared Roesch"
+
+-- let is just an expression, can annontate types if I want
+myName :: String
+myName = 
+    let firstName :: String
+        firstName = "Jared"
+        lastName :: String
+        lastName  =  "Roesch"
+    in firstName ++ lastName
+
+-- or I can leave all the types off
+
+myName :: String -- usually good to annotate this type as documentation
+myName = 
+    let firstName = "Jared"
+        lastName  =  "Roesch"
+    in firstName ++ lastName
+``` 
+Basic Types:
+```haskell
+int :: Int
+int = 1
+
+float :: Float
+float = 2.0
+
+double :: Double
+double = 3.0
+
+integer :: Integer
+integer = 4 -- can be aribtraily sized
+
+charList :: [Char]
+charList = ['H', 'E', 'l', 'l, 'o', 'W', 'o', 'r', 'l', 'd']
+
+string :: String 
+string = "HelloWorld"
+
+bool :: Boolean
+bool = charList == string -- A string is simply a list of characters!
+```
 
 ```cpp
 void swap(int *x, int *y) {
