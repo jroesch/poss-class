@@ -25,7 +25,8 @@ void swap(int *x, int *y) {
     *x = *y;
     *y = tmp;
 }
-    
+```
+
 ```haskell
 swap :: (a, b) -> (b, a)
 swap (x, y) = (y, x)
@@ -128,5 +129,4 @@ incF = fmap (+1)
 
 incF [1,2,3]
 incF (Just 10)
-
-
+```
