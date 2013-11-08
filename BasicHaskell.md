@@ -80,6 +80,7 @@ data Maybe a = Nothing | Just a deriving (Show, Eq)
 mmap :: (a -> b) -> Maybe a -> Maybe b
 mmap f Nothing  = Nothing
 mmap f (Just v) = Just $ f v
+```
 
 Let's model computations that fail with an error
 ```haskell
@@ -92,7 +93,6 @@ emap f (Left e)  = Left e
 emap f (Right v) = Right (f v)
 ```
 
-```haskell
 generalize this behavior into an abstract interface:
 
 ```haskell
